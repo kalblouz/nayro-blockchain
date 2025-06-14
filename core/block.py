@@ -5,4 +5,6 @@ class Block:
         self.index = index
         self.transactions = transactions
         self.previous_hash = previous_hash
+        self.timestamp = time.time()
+        self.nonce = 0
 
