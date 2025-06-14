@@ -1,5 +1,8 @@
 import time
 
+from core.serialization_utils import to_json, to_sha256
+
+
 class Block:
     def __init__(self, index : int, transactions : list, previous_hash : str, nonce : int):
 
@@ -18,7 +21,7 @@ class Block:
                 'nonce': self.nonce,
                 'transactions': self.transactions
                 }
-            json_represensation = to_json(block_content)
-            hash_final = to_sha256(json_represensation)
+            json_represensation = serialization_utils.to_json(block_content)
+            hash_final = serialization_utils.to_sha256(json_represensation)
 
             return hash_final
