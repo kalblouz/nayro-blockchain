@@ -9,3 +9,12 @@ class Block:
         self.timestamp = time.time()
         self.nonce = nonce
 
+
+        def calculate_hash(self):
+            block_content = {
+                'index': self.index,
+                'timestamp': self.timestamp,
+                'previous_hash': self.previous_hash,
+                'nonce': self.nonce,
+                'transactions': self.transactions
+                }
