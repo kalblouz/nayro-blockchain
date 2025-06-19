@@ -25,3 +25,10 @@ class Block:
             hash_final = to_sha256(json_represensation)
 
             return hash_final
+
+if __name__ == "__main__":
+    # Example usage
+    block = Block(1, [], "0", 0)
+    print(block.calculate_hash())
+    # Output: <hash_value>
+    # Note: The output will be a hash value based on the block's content.
